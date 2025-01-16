@@ -5,3 +5,9 @@
 2. This is my school account.
 3. This repository will hold assignments!
 
+<h1>About me</h1>
+
+<h2>Interests</h2>
+
+<h2>Sites I recommend</h2>
+
