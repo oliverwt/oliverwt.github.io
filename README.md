@@ -8,6 +8,10 @@
 <h1>About me</h1>
 
 <h2>Interests</h2>
-
+- Coding
+- History
+- Geography
+- Drawing
 <h2>Sites I recommend</h2>
-
+- This person does not exist: https://thispersondoesnotexist.com/ I think it's interesting that none of these people exist despite looking real.
+- Random Street View: https://randomstreetview.com/ I think it's interesting that you can see the world from your computer. 
