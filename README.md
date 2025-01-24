@@ -15,4 +15,4 @@ My name is Oliver Campbell and I'm excited to be taking CTI-110 at Wake Tech thi
 - Drawing
 <h2>Sites I recommend</h2>
 - [This person does not exist](https://thispersondoesnotexist.com/) I think it's interesting that none of these people exist despite looking real.
-- [Random Street View] (https://randomstreetview.com/) I think it's interesting that you can see the world from your computer. 
+- [Random Street View](https://randomstreetview.com/) I think it's interesting that you can see the world from your computer. 
