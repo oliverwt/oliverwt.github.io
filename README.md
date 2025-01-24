@@ -8,6 +8,8 @@
 <h1>About me</h1>
 My name is Oliver Campbell and I'm excited to be taking CTI-110 at Wake Tech this semester!
 
+![World](https://upload.wikimedia.org/wikipedia/commons/7/7f/Rotating_earth_animated_transparent.gif)
+
 <h2>Interests</h2>
 - Coding
 - History
