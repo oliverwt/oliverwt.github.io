@@ -6,6 +6,7 @@
 3. This repository will hold assignments!
 
 <h1>About me</h1>
+My name is Oliver Campbell and I'm excited to be taking CTI-110 at Wake Tech this semester!
 
 <h2>Interests</h2>
 - Coding
