@@ -1,3 +1,5 @@
+## Description
+In this simple game the player must think of any Weekday. Then with just a few questions, the algorithm will try to guess which day the player is thinking of. All the player needs to to is answer the questions accurately!
 ```mermaid
 flowchart TD;
     id1(Think of a Weekday and I'll guess it.)
