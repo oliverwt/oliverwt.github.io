@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
 
+<h2>Timer</h2>
+<div id="display">0</div>
+<br>
+
+<input type="button" id="startTimer" value="Start Timer"><br><br>
+<input type="button" id="stopTimer" value="Stop Timer"><br><br>
+<input type="button" id="resetTimer" value="Reset Timer"><br>
+
+<script>
+let seconds = 0;
+let timer;
+let isRunning = false;  
+
+const display = document.getElementById("display");
+
+// Start
+document.getElementById("startTimer").addEventListener("click", function() {
+    if (isRunning == false) {   
+        isRunning = true;
+        timer = setInterval(function() {
+            seconds++;
+            display.innerHTML = seconds;  
+        }, 1000);
+    }
+});
+
+// Stop
+document.getElementById("stopTimer").addEventListener("click", function() {
+    clearInterval(timer);
+    isRunning = false;
+});
+
+// Reset
+document.getElementById("resetTimer").addEventListener("click", function() {
+    clearInterval(timer);
+    seconds = 0;
+    display.innerHTML = seconds; 
+    isRunning = false;
+});
+</script>
+
+</body>
+</html>
