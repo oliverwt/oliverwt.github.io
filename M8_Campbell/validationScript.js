@@ -12,10 +12,13 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     // Check if the input value matches the pattern
     if (expPattern.test(inputElement)) {
     // Valid input: display confirmation and submit the form
-        alert("Yes");
+        alert("Success, the input value is alphanumeric.");
     // Invalid input: display error message
     } else {
-        alert("No");
+        alert("Error, the input value is not alphanumeric.");
+
+        // Prevent the form from submitting if the input value is not alphanumeric
         event.preventDefault();
     }
+
 });
