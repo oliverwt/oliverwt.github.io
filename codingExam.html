@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+    <!-- Include your name, email, and today's date at the top of the HTML page using paragraph tags. -->
+    <p>Oliver Campbell</p>
+    <p>oncampbell1@my.waketech.edu</p>
+    <p>3/12/2026</p>
+
+    <!-- Create a button with the id "Button1". Use an event
+    listener to will activate the amortization calculator when the button is clicked -->
+    <button id="Button1">Calculate Amorization</button>
+
+    <div id="result"></div>
+
+<script>
+    const button1 = document.getElementById("Button1");
+
+    button1.addEventListener("click", buttonClicked);
+
+    function buttonClicked() {
+        // Prompt the user to enter the loan amount (without commas).
+        let loanAmount = Number(prompt("Loan Amount?"));
+
+        // Prompt the user to enter the loan term in years (either 30 or 15).
+        let termYears = Number(prompt("Loan Term? (15 or 30)"));
+
+        // alert the user if the loan term is not equal to 15 or 30 years.
+        if (termYears !== 15 && termYears !== 30) {
+            alert("the loan term is not equal to 15 or 30 years.");
+        }
+
+        // Calculate and display the monthly payment at a fixed interest rate of 5.75%
+        const interestRate = 0.0575
+        monthlyPayment = (((interestRate / 12) * loanAmount) / (1 - Math.pow(1 + (interestRate / 12), (termYears * -12)))).toFixed(2);
+
+        let result = document.getElementById("result");
+        result.innerHTML = "";
+
+        // Mortgage term in years
+        result.innerHTML += "Mortgage term in years: " + termYears + "<br>";
+
+        // Mortgage interest rate
+        result.innerHTML += "Mortgage interest rate: 5.75%<br>";
+
+        // To calculate the total interest amount, use the formula: (monthlyPayment * termMonths) - loanAmount
+        let totalInterest = (monthlyPayment * termYears * 12) - loanAmount;
+
+        // Mortgage amount (total loan amount = loanAmount + totalInterest)
+        let totalLoanAmount = loanAmount + totalInterest;
+        result.innerHTML += "Mortgage Amount: " + totalLoanAmount.toFixed(2) + "<br>";
+
+        // Total Interest Amount
+        result.innerHTML += "Total Interest Amount: " + totalInterest.toFixed(2) + "<br>";
+
+        // Total mortgage amount(To calculate the total loan amount, use the formula: loanAmount + totalInterest)
+        let totalMortgageAmount = loanAmount + totalInterest
+        result.innerHTML += "Total Mortgage Amount: " + totalMortgageAmount + "<br>";
+
+        // Number of months
+        let termMonths = termYears * 12;
+
+        // starting balance
+        let totalLoan = totalMortgageAmount;
+
+        for (let i = 1; i <= termMonths; i++) {
+
+            // To calculate the mortgage loan balance, use the formula: totalLoan - monthlyPayment
+            totalLoan = totalLoan - monthlyPayment;
+
+
+        result.innerHTML +=
+            "Month " + i +
+            " | Payment: $" + Number(monthlyPayment).toFixed(2) +
+            " | Balance: $" + totalLoan.toFixed(2) +
+            "<br>";
+
+        // Use an if statement to print "Ending..." when the balance reaches 0.
+        if (totalLoan === 0 || totalLoan < 0) {
+            result.innerHTML += "Ending...<br>";
+            break;
+    }
+}
+
+    };
+</script>
+
+</body>
+</html>
