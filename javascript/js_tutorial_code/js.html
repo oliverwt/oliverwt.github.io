@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Test</title>
+</head>
+<body>
+    <h1>Testing JavaScript in Browser</h1>
+
+    <!-- Container for displaying JavaScript variables -->
+    <div id="js-output"></div>
+
+    <script>
+        // JavaScript variables
+        let number = 5;
+        const greeting = "Hello, World!";
+        let isTrue = false;
+        let scores = [90, 85, 88];
+
+        // Logging to console
+        console.log('Number:', number);
+        console.log('Greeting:', greeting);
+        console.log('Boolean Value:', isTrue);
+        console.log('Scores:', scores);
+
+        // Function to display variables on the webpage
+        function displayVariables() {
+            const outputDiv = document.getElementById('js-output');
+            outputDiv.innerHTML = `
+                <p>Number: ${number}</p>
+                <p>Greeting: ${greeting}</p>
+                <p>Boolean Value: ${isTrue}</p>
+                <p>Scores: ${scores.join(', ')}</p>
+            `;
+        }
+
+        // Call the function to update the DOM
+        displayVariables();
+    </script>
+</body>
+</html>
+

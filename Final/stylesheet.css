@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, "Times New Roman";
+    background-color: lightblue;
+}
+
+#taskmanager {
+    margin-top: 20px;
+}
+
+.task {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
